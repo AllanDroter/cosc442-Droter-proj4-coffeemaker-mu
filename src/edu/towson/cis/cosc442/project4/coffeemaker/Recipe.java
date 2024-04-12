@@ -149,16 +149,7 @@ public class Recipe {
      * @return boolean
      */
     public boolean equalsQuery(Recipe r) {
-        if (r.getName() == null) {
-            return false;
-        }
-        if (this.name == null) {
-            return false;
-        }
-        if ((this.name).equals(r.getName())) {
-            return true;
-        }
-        return false;
+        return r != null && this.name != null && this.name.equals(r.getName());
     }
 
     /**
@@ -166,6 +157,7 @@ public class Recipe {
      * 
      * @return String
      */
+    @Override
     public String toString() {
         return name;
     }
